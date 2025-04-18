@@ -83,7 +83,8 @@ div#dictionary-entries > div.entry:nth-child(n + 2) .kanji-glyph-table > tbody >
 
 /* Font Families */
 :root,:root[data-theme="dark"] {
-    --gyousho-font: "DFGyoSho Pro-5";
+    /* --gyousho-font: "DFGyoSho Pro-5"; */
+    --gyousho-font: "klee One";
     --kyoukasho-font: "DFKyoKaSho Pro-5";
     --kaisho-font: "DFKaiSho Pro-5";
     --english-font: "serif";
@@ -156,8 +157,8 @@ div.entry:has(.definition-item[data-dictionary^="新明解国語辞典"]) { --ac
 /*---------------------------*/
 
 /* 漢検漢字辞典 */
-.gloss-sc-div[data-sc-subentries^="子項目"] { display: none; }
-.gloss-sc-div[data-sc-subentries^="孫項目"] { display: none; }
+/*.gloss-sc-div[data-sc-subentries^="子項目"] { display: none; }
+.gloss-sc-div[data-sc-subentries^="孫項目"] { display: none; } */
 .gloss-sc-div:has(.gloss-sc-table-container) { display: none; }
 .gloss-sc-div:has(.gloss-sc-span[title="親字が頭以外につく熟語のうち、学習性の高いもの"]) { display: none; }
 
@@ -166,8 +167,8 @@ div.entry:has(.definition-item[data-dictionary^="新明解国語辞典"]) { --ac
 .gloss-sc-div[data-sc-iwakoku8="blkkan"]:has(.gloss-sc-span[style="vertical-align: text-bottom;"]) { display: none; }
 
 /* 三省堂国語辞典 */
-.entry:has(.tag[title="子項目"]) { display: none; }
-.entry:has(.tag[title="句項目"]) { display: none; }
+/* .entry:has(.tag[title="子項目"]) { display: none; }
+.entry:has(.tag[title="句項目"]) { display: none; } */
 
 /* 新選国語辞典 */
 .gloss-image-link { display: none; }
