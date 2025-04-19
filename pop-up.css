@@ -109,7 +109,7 @@ div#dictionary-entries > div.entry:nth-child(n + 2) .kanji-glyph-table > tbody >
 .inflection-rule-chains { font-family: var(--kaisho-font); }
 
 /* Pitch */
-.pronunciation-list { font-family: var(--kyoukasho-font); font-size: 1.2em; }
+.pronunciation-list { font-family: var(--kyoukasho-font); font-size: 1em; }
 
 
 
