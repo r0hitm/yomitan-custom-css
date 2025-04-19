@@ -1,151 +1,192 @@
 {
     "version": 0,
-    "date": "2025-04-18 15:55:42",
-    "url": "chrome-extension://likgccmbimhjbgkjambclfkhldnlhbnn/",
+    "date": "2025-04-19 02:13:41",
+    "url": "moz-extension://22a3693d-dc4a-4ca7-822f-7c8932ce8dd9/",
     "manifest": {
-        "action": {
-            "default_icon": {
-                "16": "images/icon16.png",
-                "19": "images/icon19.png",
-                "32": "images/icon32.png",
-                "38": "images/icon38.png",
-                "48": "images/icon48.png",
-                "64": "images/icon64.png",
-                "128": "images/icon128.png"
+        "author": "Yomidevs",
+        "browser_specific_settings": {
+            "gecko": {
+                "admin_install_only": null,
+                "id": "{6b733b82-9261-47ee-a595-2dda294a4d08}",
+                "strict_max_version": null,
+                "strict_min_version": "115.0",
+                "update_url": null
             },
-            "default_popup": "action-popup.html",
-            "default_title": "Yomitan"
-        },
-        "author": {
-            "email": "themoeway@googlegroups.com"
-        },
-        "background": {
-            "service_worker": "sw.js",
-            "type": "module"
-        },
-        "commands": {
-            "openInfoPage": {
-                "description": "Open the info page"
-            },
-            "openPopupWindow": {
-                "description": "Open the popup window"
-            },
-            "openSearchPage": {
-                "description": "Open the search page",
-                "suggested_key": {
-                    "default": "Alt+Insert"
-                }
-            },
-            "openSettingsPage": {
-                "description": "Open the settings page"
-            },
-            "toggleTextScanning": {
-                "description": "Toggle text scanning on/off",
-                "suggested_key": {
-                    "default": "Alt+Delete"
-                }
+            "gecko_android": {
+                "strict_max_version": null,
+                "strict_min_version": "115.0"
             }
+        },
+        "description": "Popup dictionary for language learning",
+        "developer": null,
+        "homepage_url": null,
+        "install_origins": null,
+        "manifest_version": 3,
+        "name": "Yomitan Popup Dictionary",
+        "short_name": null,
+        "version": "25.3.31.0",
+        "background": {
+            "page": "moz-extension://22a3693d-dc4a-4ca7-822f-7c8932ce8dd9/background.html",
+            "preferred_environment": null,
+            "scripts": null,
+            "service_worker": null,
+            "type": null
         },
         "content_scripts": [
             {
                 "all_frames": true,
+                "css": null,
+                "exclude_globs": null,
+                "exclude_matches": null,
+                "include_globs": null,
                 "js": [
-                    "js/app/content-script-wrapper.js"
+                    "moz-extension://22a3693d-dc4a-4ca7-822f-7c8932ce8dd9/js/app/content-script-wrapper.js"
                 ],
                 "match_about_blank": true,
+                "match_origin_as_fallback": null,
                 "matches": [
                     "http://*/*",
                     "https://*/*",
                     "file://*/*"
                 ],
-                "run_at": "document_idle"
+                "run_at": "document_idle",
+                "world": "ISOLATED"
             }
         ],
         "content_security_policy": {
-            "extension_pages": "default-src 'self'; script-src 'self' 'wasm-unsafe-eval'; img-src blob: 'self'; style-src 'self' 'unsafe-inline'; media-src *; connect-src *",
-            "sandbox": "sandbox allow-scripts; default-src 'self'; script-src 'self' 'unsafe-eval'; style-src 'unsafe-inline'"
+            "extension_pages": "default-src 'self'; script-src 'self' 'wasm-unsafe-eval'; img-src blob: 'self'; style-src 'self' 'unsafe-inline'; media-src *; connect-src *"
         },
-        "description": "Popup dictionary for language learning",
-        "differential_fingerprint": "1.23e4189b1ef220ffb6e29df16057735be9d99c3756e1ce3b8de5ef0bcca85711",
+        "granted_host_permissions": false,
+        "hidden": false,
         "host_permissions": [
             "<all_urls>"
         ],
         "icons": {
-            "16": "images/icon16.png",
-            "19": "images/icon19.png",
-            "32": "images/icon32.png",
-            "38": "images/icon38.png",
-            "48": "images/icon48.png",
-            "64": "images/icon64.png",
-            "128": "images/icon128.png"
+            "16": "moz-extension://22a3693d-dc4a-4ca7-822f-7c8932ce8dd9/images/icon16.png",
+            "19": "moz-extension://22a3693d-dc4a-4ca7-822f-7c8932ce8dd9/images/icon19.png",
+            "32": "moz-extension://22a3693d-dc4a-4ca7-822f-7c8932ce8dd9/images/icon32.png",
+            "38": "moz-extension://22a3693d-dc4a-4ca7-822f-7c8932ce8dd9/images/icon38.png",
+            "48": "moz-extension://22a3693d-dc4a-4ca7-822f-7c8932ce8dd9/images/icon48.png",
+            "64": "moz-extension://22a3693d-dc4a-4ca7-822f-7c8932ce8dd9/images/icon64.png",
+            "128": "moz-extension://22a3693d-dc4a-4ca7-822f-7c8932ce8dd9/images/icon128.png"
         },
-        "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAuFMG+/vjX2le7bR1dzuuLZwLxycxTxo033lLgMvO2BYQeQjIxhHazptr+34TX9oN71jnDxc11MWIl/pJPXVhdWyawrVNX9AVSz0kqOcvv0TqJAoVofLeAtRAeANjGjIM6QN46SAq9RAsKh60+0ZxYVWasFHB0gdbIaucJE54sXcUOGBsCah/ZziZMsunEhWpUC0nKT3eW9/eRQVHMBVFQ06R1luESf2f0EXbiS70smI0j3jb0xxWnbHQS8Bz20WZi0/kcysCmU/suMKCzdRXENWVcPG2xpcIYbSXBUHuP25jr3qElq5VEqeIUeHdYHd0GbkhlHPG0Cuo38q6D4lQ5wIDAQAB",
-        "manifest_version": 3,
+        "incognito": "spanning",
         "minimum_chrome_version": "102.0.0.0",
-        "name": "Yomitan Popup Dictionary",
-        "omnibox": {
-            "keyword": "yomi"
-        },
+        "minimum_opera_version": null,
+        "optional_host_permissions": [],
         "optional_permissions": [
             "clipboardRead",
             "nativeMessaging"
         ],
+        "options_page": null,
         "options_ui": {
+            "browser_style": false,
             "open_in_tab": true,
-            "page": "settings.html"
+            "page": "moz-extension://22a3693d-dc4a-4ca7-822f-7c8932ce8dd9/settings.html"
         },
         "permissions": [
             "storage",
             "clipboardWrite",
             "unlimitedStorage",
             "declarativeNetRequest",
-            "scripting",
-            "offscreen",
-            "contextMenus"
+            "scripting"
         ],
-        "sandbox": {
-            "pages": [
-                "template-renderer.html"
-            ]
-        },
-        "update_url": "https://clients2.google.com/service/update2/crx",
-        "version": "25.4.7.0",
         "web_accessible_resources": [
             {
+                "extension_ids": null,
                 "matches": [
                     "<all_urls>"
                 ],
                 "resources": [
-                    "popup.html",
-                    "template-renderer.html",
-                    "js/*",
-                    "lib/resvg.wasm"
+                    "/popup.html",
+                    "/js/*",
+                    "/lib/resvg.wasm"
                 ]
             }
-        ]
-    },
-    "environment": {
-        "browser": "edge",
-        "platform": {
-            "os": "win"
+        ],
+        "page_action": null,
+        "action": {
+            "browser_style": false,
+            "default_area": null,
+            "default_icon": {
+                "16": "moz-extension://22a3693d-dc4a-4ca7-822f-7c8932ce8dd9/images/icon16.png",
+                "19": "moz-extension://22a3693d-dc4a-4ca7-822f-7c8932ce8dd9/images/icon19.png",
+                "32": "moz-extension://22a3693d-dc4a-4ca7-822f-7c8932ce8dd9/images/icon32.png",
+                "38": "moz-extension://22a3693d-dc4a-4ca7-822f-7c8932ce8dd9/images/icon38.png",
+                "48": "moz-extension://22a3693d-dc4a-4ca7-822f-7c8932ce8dd9/images/icon48.png",
+                "64": "moz-extension://22a3693d-dc4a-4ca7-822f-7c8932ce8dd9/images/icon64.png",
+                "128": "moz-extension://22a3693d-dc4a-4ca7-822f-7c8932ce8dd9/images/icon128.png"
+            },
+            "default_popup": "moz-extension://22a3693d-dc4a-4ca7-822f-7c8932ce8dd9/action-popup.html",
+            "default_title": "Yomitan",
+            "theme_icons": null
+        },
+        "declarative_net_request": null,
+        "default_locale": null,
+        "l10n_resources": null,
+        "protocol_handlers": null,
+        "theme_experiment": null,
+        "experiment_apis": null,
+        "omnibox": {
+            "keyword": "yomi"
+        },
+        "commands": {
+            "toggleTextScanning": {
+                "suggested_key": {
+                    "default": "Alt+Delete"
+                },
+                "description": "Toggle text scanning on/off"
+            },
+            "openInfoPage": {
+                "description": "Open the info page"
+            },
+            "openSettingsPage": {
+                "description": "Open the settings page"
+            },
+            "openSearchPage": {
+                "suggested_key": {
+                    "default": "Alt+Insert"
+                },
+                "description": "Open the search page"
+            },
+            "openPopupWindow": {
+                "description": "Open the popup window"
+            }
+        },
+        "applications": {
+            "gecko": {
+                "admin_install_only": null,
+                "id": "{6b733b82-9261-47ee-a595-2dda294a4d08}",
+                "strict_max_version": null,
+                "strict_min_version": "115.0",
+                "update_url": null
+            },
+            "gecko_android": {
+                "strict_max_version": null,
+                "strict_min_version": "115.0"
+            }
         }
     },
-    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0",
+    "environment": {
+        "browser": "firefox-mobile",
+        "platform": {
+            "os": "android"
+        }
+    },
+    "userAgent": "Mozilla/5.0 (Android 15; Mobile; rv:137.0) Gecko/137.0 Firefox/137.0",
     "permissions": {
         "origins": [
             "<all_urls>",
-            "file:///*",
             "http://*/*",
-            "https://*/*"
+            "https://*/*",
+            "file://*/*"
         ],
         "permissions": [
-            "clipboardWrite",
-            "contextMenus",
             "storage",
+            "clipboardWrite",
             "unlimitedStorage",
             "declarativeNetRequest",
-            "scripting",
-            "offscreen"
+            "scripting"
         ]
     },
     "options": {
@@ -157,9 +198,9 @@
                 "options": {
                     "general": {
                         "enable": true,
-                        "resultOutputMode": "merge",
+                        "resultOutputMode": "group",
                         "debugInfo": false,
-                        "maxResults": 32,
+                        "maxResults": 16,
                         "showAdvanced": true,
                         "popupDisplayMode": "default",
                         "popupWidth": 420,
@@ -169,7 +210,7 @@
                         "popupHorizontalOffset2": 10,
                         "popupVerticalOffset2": 0,
                         "popupHorizontalTextPosition": "below",
-                        "popupVerticalTextPosition": "before",
+                        "popupVerticalTextPosition": "default",
                         "popupScalingFactor": 1,
                         "popupScaleRelativeToPageZoom": false,
                         "popupScaleRelativeToVisualViewport": true,
@@ -195,7 +236,7 @@
                         "frequencyDisplayMode": "split-tags-grouped",
                         "termDisplayMode": "ruby",
                         "sortFrequencyDictionary": "JPDBv2㋕",
-                        "sortFrequencyDictionaryOrder": "ascending",
+                        "sortFrequencyDictionaryOrder": "descending",
                         "language": "ja",
                         "enableContextMenuScanSelected": true,
                         "stickySearchHeader": true,
@@ -218,7 +259,7 @@
                     "audio": {
                         "enabled": true,
                         "volume": 100,
-                        "autoPlay": false,
+                        "autoPlay": true,
                         "sources": [
                             {
                                 "type": "custom-json",
@@ -246,10 +287,10 @@
                     "scanning": {
                         "inputs": [
                             {
-                                "include": "shift",
+                                "include": "",
                                 "exclude": "mouse0",
                                 "types": {
-                                    "mouse": true,
+                                    "mouse": false,
                                     "touch": false,
                                     "pen": false
                                 },
@@ -277,7 +318,7 @@
                                 "types": {
                                     "mouse": false,
                                     "touch": true,
-                                    "pen": true
+                                    "pen": false
                                 },
                                 "options": {
                                     "showAdvanced": false,
@@ -316,7 +357,7 @@
                         "enableOnPopupExpressions": true,
                         "enableOnSearchPage": true,
                         "enableSearchTags": false,
-                        "layoutAwareScan": false,
+                        "layoutAwareScan": true,
                         "matchTypePrefix": false,
                         "hidePopupOnCursorExit": false,
                         "hidePopupOnCursorExitDelay": 0,
@@ -353,6 +394,16 @@
                         {
                             "name": "実用日本語表現辞典",
                             "alias": "実用日本語表現辞典",
+                            "enabled": true,
+                            "allowSecondarySearches": false,
+                            "definitionsCollapsible": "not-collapsible",
+                            "partsOfSpeechFilter": true,
+                            "useDeinflections": true,
+                            "styles": ""
+                        },
+                        {
+                            "name": "Onomatoproject",
+                            "alias": "Onomatoproject",
                             "enabled": true,
                             "allowSecondarySearches": false,
                             "definitionsCollapsible": "not-collapsible",
@@ -483,16 +534,6 @@
                         {
                             "name": "学研 四字熟語辞典",
                             "alias": "学研 四字熟語辞典",
-                            "enabled": true,
-                            "allowSecondarySearches": false,
-                            "definitionsCollapsible": "not-collapsible",
-                            "partsOfSpeechFilter": true,
-                            "useDeinflections": true,
-                            "styles": ""
-                        },
-                        {
-                            "name": "Onomatoproject",
-                            "alias": "Onomatoproject",
                             "enabled": true,
                             "allowSecondarySearches": false,
                             "definitionsCollapsible": "not-collapsible",
@@ -681,16 +722,6 @@
                             "styles": ""
                         },
                         {
-                            "name": "擬音語・擬態語辞典",
-                            "alias": "擬音語・擬態語辞典",
-                            "enabled": true,
-                            "allowSecondarySearches": false,
-                            "definitionsCollapsible": "not-collapsible",
-                            "partsOfSpeechFilter": true,
-                            "useDeinflections": true,
-                            "styles": ""
-                        },
-                        {
                             "name": "TheKanjiMap Kanji Radicals/Composition",
                             "alias": "TheKanjiMap Kanji Radicals/Composition",
                             "enabled": true,
@@ -713,7 +744,8 @@
                         "server": "http://127.0.0.1:8765",
                         "tags": [
                             "yomitan",
-                            "immersion"
+                            "immersion",
+                            "firefox-mobile"
                         ],
                         "screenshot": {
                             "format": "png",
